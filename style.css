@@ -1,19 +1,23 @@
 * {
-   padding: 0px;
-   margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .bordercolor {
-   border: 2px blue solid;
+  border: 2px blue solid;
 }
 
 /*lisa*/
-
-
 .h-10 {
-   height: 3.5em;
+  height: 3.5em;
 }
 
 .h-11 {
-   height: 3em;
+  height: 3em;
+}
+
+/* Elvis */
+.navbar-brand {
+  display: flex;
+  align-items: center;
 }

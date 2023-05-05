@@ -16,28 +16,30 @@
 <body>
   <!--header section-->
   <nav class="navbar navbar-dark bg-primary py-2">
-    <div class="container-fluid text-white">
-      <div class="col-4">
-        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#leftSideBar"><i
-            class="bi bi-list mx-2 h3"></i></button>
-        <span class="navbar-brand h3">ToDo-List </span>
-      </div>
-      <div class="col-4">
-        <div class="bg-light rounded shadow-sm">
-          <div class="input-group">
-            <input type="search" placeholder="Search Task" aria-describedby="button-addon1"
-              class="form-control border-0 bg-light">
-            <div class="input-group-append">
-              <button id="buttonSearch" type="submit" class="btn btn-link text-primary "><i class="bi bi-search"></i>
-              </button>
-            </div>
+    <div class="container-fluid">
+      <ul class="nav">
+        <li class="nav-item">
+          <a name="" id="" class="btn btn-primary" data-bs-toggle="collapse" href="#leftSideBar" href="#"
+            role="button"><i class="bi bi-list h3"></i></a>
+        </li>
+        <a class="navbar-brand text-align-bottom" href="#">ToDo-List</a>
+      </ul>
+      <div class="bg-light rounded shadow-sm">
+        <div class="input-group">
+          <input type="search" placeholder="Search Task" aria-describedby="button-addon1"
+            class="form-control border-0 bg-light">
+          <div class="input-group-append">
+            <button id="buttonSearch" type="submit" class="btn btn-link text-primary "><i class="bi bi-search"></i>
+            </button>
           </div>
         </div>
       </div>
-      <div class="col-4 text-end">
-        <i class="bi bi-house mx-2 h3"></i>
-        <i class="bi bi-gear-fill h3 mx-3"></i>
-      </div>
+      <ul class="nav">
+        <li class="nav-item"><a name="" id="" class="btn btn-primary" href="#" role="button"><i
+              class="bi bi-house h2"></i></a></li>
+        <li class="nav-item"><a name="" id="" class="btn btn-primary" href="#" role="button"><i
+              class="bi bi-house h2"></i></a></li>
+      </ul>
     </div>
   </nav>
   <!--sidebar & main section-->
