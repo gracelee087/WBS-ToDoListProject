@@ -84,3 +84,8 @@ body {
 .newandrecentNotes {
   margin-top: 2%;
 }
+.list-group-item::after{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/4476/4476373.png");
+  width: 75px;
+  height: 75px;
+}
