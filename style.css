@@ -16,60 +16,38 @@
   height: 3em;
 }
 
-
+/*main section*/
 .input-area {
    position: relative;
  }
- .task-input {
-   transition: padding-top 0.2s ease, margin-top 0.2s ease;
-   width: 80%;
-   border: none;
-   border: 1px solid rgb(73, 59, 136);
- }
- .task-input:focus {
-   outline: none;
-   border-bottom: 3px solid rgb(6, 24, 114);
-   border-left: none;
-   border-right: none;
-   border-top: none;
-   transition: 0.5s;
-   padding-top: 35px;
- }
- 
- .task-input + label > span {
+
+ .task-input > span {
    font-weight: 300;
    margin: 0;
    position: absolute;
    color: #1b1a1a;
    font-size: 14px;
-   top: 6px;
+   top: 3px;
    left: 10px;
-   -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
-   transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
- }
- 
- .task-input:focus + label > span {
-   top: 0px;
-   color: #333;
  }
  
  .button-add {
    border: none;
    width: 3em;
-   background-color: rgb(159, 154, 231);
+   background-color: rgb(158, 169, 226);
  }
  .button-add:hover {
    background-color: cadetblue;
  }
  .button-add:active {
    background-color: #f3f4f6;
-   box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15),
+   box-shadow: -1px 2px 5px rgba(165, 82, 19, 0.15),
      0px 1px 1px rgba(81, 41, 10, 0.15);
    transform: translateY(0.125rem);
  }
  
  .task-list-container {
-   border: 1px solid rgb(138, 173, 206);
+   border: 1px solid rgb(37, 69, 99);
    margin-top: 1em;
    position: relative;
  }
@@ -84,7 +62,7 @@
  }
  
  #tab-underline {
-   background-color: rgb(159, 154, 231);
+   background-color: rgb(148, 143, 216);
    height: 4px !important;
    position: absolute;
    top: 52px;
@@ -118,30 +96,27 @@
  }
  .button-box button :active {
    position: relative;
-   top: 2px;
+   top: 0.5px;
  }
  
  .button-box button:first-child:hover {
-   background-color: greenyellow;
+   background-color: rgb(150, 199, 82);
  }
  .button-box button:nth-child(2):hover {
-   background-color: rgb(255, 0, 0, 0.3);
+   background-color: rgba(207, 86, 181, 0.3);
  }
  
  .fa-check {
-   color: limegreen;
+   color: rgb(30, 88, 30);
  }
  
  .fa-trash {
-   color: red;
- }
- .fa-undo-alt {
-   color: lightslategray;
+   color: rgb(87, 81, 165);
  }
  
  .task-done {
    text-decoration: line-through;
-   background-color: lightgray;
+   background-color: rgb(218, 215, 228);
    transition: 0.5s;
  }
 
