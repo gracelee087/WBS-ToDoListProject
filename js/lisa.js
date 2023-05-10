@@ -1,10 +1,12 @@
-let userInput = document.querySelector(".task-input");
-let addButton = document.querySelector(".button-add");
+let userInput = document.querySelector(".task-input"); 
+let addButton = document.querySelector(".button-add"); 
 let tabs = document.querySelectorAll(".tab-type div");
 let underLine = document.getElementById("tab-underline");
-let taskList = [];
-let selectedMenu = "tab-all";
+let taskList = []; 
+let selectedMenu = "tab-all";  // initial value
 let filteredList = [];
+
+
 
 addButton.addEventListener("mousedown", addTask);
 userInput.addEventListener("keydown", function (event) {
@@ -12,24 +14,26 @@ userInput.addEventListener("keydown", function (event) {
     addTask(event);
   }
 });
+
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener("click", function (event) {
     filter(event);
   });
 }
 
-function addTask() {
-  let taskValue = userInput.value;
+function addTask() { 
+  let taskValue = userInput.value; 
   let task = {
     content: taskValue,
     isComplete: false,
     id: randomIDGenerator(),
   };
 
-  taskList.push(task);
+  taskList.push(task); 
   userInput.value = "";
   render();
 }
+
 
 function render() {
   let result = "";
@@ -63,6 +67,9 @@ function render() {
   document.getElementById("task-board").innerHTML = result;
 }
 
+
+
+
 function toggleDone(id) {
   for (let i = 0; i < taskList.length; i++) {
     if (taskList[i].id === id) {
@@ -82,6 +89,10 @@ function deleteTask(id) {
 
   filter();
 }
+
+
+
+
 function filter(e) {
   if (e) {
     selectedMenu = e.target.id;
@@ -112,5 +123,20 @@ function randomIDGenerator() {
   // Math.random should be unique because of its seeding algorithm.
   // Convert it to base 36 (numbers + letters), and grab the first 9 characters
   // after the decimal.
-  return "_" + Math.random().toString(36).substr(2, 9);
+  return "_" + Math.random().toString(36).substring(2, 9);
 }
+
+
+
+//local storage part 
+if (localStorage.getItem("taskList")) {
+  taskList = JSON.parse(localStorage.getItem("taskList")); // change JSON letter to javascript object
+  render(); // UI로 보여줘. 
+}
+// Add an event listener to the window object to handle the 'beforeunload' event //
+window.addEventListener("beforeunload", function () { // window객체에 추가된것으로 페이지를 떠나기전에 뭔가 하는 beforeunload 함수이다.  
+  // Save the taskList data to localStorage
+  localStorage.setItem("taskList", JSON.stringify(taskList)); // javascript object to JSON letter
+});
+
+
