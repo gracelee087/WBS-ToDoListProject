@@ -58,7 +58,10 @@ function render() {
             <span>${list[i].content}</span>
             <div class="button-box">
             <button onclick="toggleDone('${list[i].id}')"><i class="fa fa-check"></i></button>
+            
             <button onclick="deleteTask('${list[i].id}')"><i class="fa fa-trash"></i></button>
+
+
             </div>
         </div>`;
     }

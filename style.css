@@ -3,11 +3,9 @@
   margin: 0px;
 }
 
-.bordercolor {
-  border: 2px rgba(0, 0, 255, 0) solid;
-}
 
-/*lisa*/
+
+/*lisa sidebar*/
 .h-10 {
   height: 3.5em;
 }
@@ -16,12 +14,44 @@
   height: 3em;
 }
 
+.icon-color {
+  color: rgb(4, 129, 253);
+}
+
+
+.button-background-1 {
+  background-color: #a9baff;
+}
+
+.last-line {
+  border-top: 1px solid rgb(143, 157, 176); 
+  background-color: #dbe3f2;
+}
+
+
+
+
+
+
+
+
+
 /*lisa main section*/
 .input-area {
    position: relative;
    display: flex;
    flex-direction: row;
  }
+
+ .task-input {
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  width: 60%;
+  height: 30px;
+  border: none;
+  border: 1px solid rgb(55, 53, 50);
+}
+
+
 
  .task-input > span {
    font-weight: 300;
@@ -121,12 +151,16 @@
  .fa-trash {
    color: rgb(87, 81, 165);
  }
+
  
  .task-done {
    text-decoration: line-through;
    background-color: rgb(218, 215, 228);
    transition: 0.5s;
  }
+
+
+
 
  /*lisa main end*/ 
 
@@ -142,6 +176,9 @@
   font-size: 30px;
   font-family: 'Ubuntu', sans-serif;
 }
+
+
+
 
 
 
@@ -216,7 +253,7 @@ body {
 
 #mainsection {
   width: 83%;
-  min-height: 94vh;
+  height: 100vh; 
   background-image: url("https://cdn.kibrispdr.org/data/1792/pixel-art-gif-wallpaper-1920x1080-33.gif");
   background-size: cover;
   padding: 1% 2%;
