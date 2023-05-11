@@ -1,8 +1,8 @@
 * {
   padding: 0px;
-  margin: 0px;;
+  margin: 0px;
+  ;
 }
-
 
 .bordercolor {
   border: 2px rgba(0, 0, 255, 0) solid;
@@ -19,14 +19,12 @@
   color: rgb(255, 255, 255);
 }
 
-
 .button-background-1 {
   background-color: #394362;
 }
 
-
 .last-line {
-  border-top: 2px solid rgb(255, 20, 20); 
+  border-top: 2px solid rgb(255, 20, 20);
   background-color: #dbe3f2;
 }
 
@@ -34,178 +32,135 @@
   border: 0;
 }
 
-
-
-
 /*lisa main section*/
 .input-area {
-   position: relative;
-   display: flex;
-   flex-direction: row;
- }
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
 
-
- .task-input {
+.task-input {
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
   width: 80%;
   border: lightblue;
   border: 1px solid lightskyblue;
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
 }
 
+.task-input>span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #1b1a1a;
+  font-size: 14px;
+  top: 3px;
+  left: 10px;
+}
 
- .task-input > span {
-   font-weight: 300;
-   margin: 0;
-   position: absolute;
-   color: #1b1a1a;
-   font-size: 14px;
-   top: 3px;
-   left: 10px;
- }
- 
- .button-add {
-   border: none;
-   width: 3em;
-   margin-left: 5px;
-   background-color: none;
-   background-color: white;
-   
- }
- .button-add:hover {
-   background-color: rgb(255, 255, 255);
-   transform: scale(1.1);
-   transition: 0.4s;
- }
- .button-add:active {
-   background-color: #f3f4f6;
-   box-shadow: -1px 2px 5px rgba(165, 82, 19, 0.15),
-     0px 1px 1px rgba(81, 41, 10, 0.15);
-   transform: translateY(0.125rem);
- }
- 
- .task-list-container {
+.button-add {
+  border: none;
+  width: 3em;
+  margin-left: 5px;
+  background-color: none;
+  background-color: white;
+}
+
+.button-add:hover {
+  background-color: rgb(255, 255, 255);
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+.button-add:active {
+  background-color: #f3f4f6;
+  box-shadow: -1px 2px 5px rgba(165, 82, 19, 0.15),
+    0px 1px 1px rgba(81, 41, 10, 0.15);
+  transform: translateY(0.125rem);
+}
+
+.task-list-container {
   border: 1px solid rgb(255, 255, 255);
-  
-   margin-top: 1em;
-   position: relative;
- }
- .tab-type {
-   display: flex;
-   border-bottom: 1px solid rgb(138, 173, 206);
- }
- 
- .tab-type div {
-   padding: 1em;
-   cursor: pointer;
- }
- 
- #tab-underline {
-   background-color: rgb(32, 238, 253);
-   height: 4px !important;
-   position: absolute;
-   top: 52px;
-   left: 0px;
-   width: fit-content;
-   transition: 0.5s;
-   padding: 0px;
- }
- 
- .task {
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
-   border-bottom: 1px solid lightgray;
-   position: relative;
- }
- .task span {
-   padding: 1em;
- }
- .button-box {
-   display: flex;
- }
- 
- .button-box button {
-   height: 100%;
-   border: none;
-   width: 5em;
-   margin: 0;
-   background-color: white;
-   transition: 0.5s;
- }
- .button-box button :active {
-   position: relative;
-   top: 0.5px;
- }
- 
- .button-box button:first-child:hover {
+  margin-top: 1em;
+  position: relative;
+}
+
+.tab-type {
+  display: flex;
+  border-bottom: 1px solid rgb(138, 173, 206);
+}
+
+.tab-type div {
+  padding: 1em;
+  cursor: pointer;
+}
+
+#tab-underline {
+  background-color: rgb(32, 238, 253);
+  height: 4px !important;
+  position: absolute;
+  top: 52px;
+  left: 0px;
+  width: fit-content;
+  transition: 0.5s;
+  padding: 0px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+}
+
+.task span {
+  padding: 1em;
+}
+
+.button-box {
+  display: flex;
+}
+
+.button-box button {
+  height: 100%;
+  border: none;
+  width: 5em;
+  margin: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.button-box button :active {
+  position: relative;
+  top: 0.5px;
+}
+
+/* Commented from Elvis because of added hover effects */
+/*  .button-box button:first-child:hover {
    background-color: rgb(150, 199, 82);
  }
  .button-box button:nth-child(2):hover {
    background-color: rgba(207, 86, 181, 0.3);
- }
- 
- .fa-check {
-   color: rgb(30, 88, 30);
- }
- 
- .fa-trash {
-   color: rgb(87, 81, 165);
- }
- 
- .task-done {
-   text-decoration: line-through;
-   background-color: rgb(218, 215, 228);
-   transition: 0.5s;
- }
+ } */
+.fa-check {
+  color: rgb(30, 88, 30);
+}
 
- .main-section-added {
+.fa-trash {
+  color: rgb(87, 81, 165);
+}
+
+.task-done {
+  text-decoration: line-through;
+  background-color: rgb(218, 215, 228);
+  transition: 0.5s;
+}
+
+.main-section-added {
   width: 80%;
- }
- /*lisa main end*/ 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*lisa main end*/
 /* Elvis */
 .navbar-brand {
   display: flex;
@@ -218,6 +173,28 @@
   color: rgba(255, 255, 255, 1);
 }
 
+.pencil:hover {
+  background-color: rgb(173, 177, 168);
+  border-radius: 0%;
+}
+
+.check:hover {
+  background-color: rgb(150, 199, 82);
+}
+
+.trash:hover {
+  background-color: rgba(207, 86, 181, 0.3);
+}
+
+.but {
+  opacity: 0;
+}
+
+.task:hover .but {
+  opacity: 1;
+}
+
+/* Elvis END */
 body {
   display: flex;
   flex-direction: column;
@@ -240,7 +217,6 @@ body {
   width: 15%;
 }
 
-
 .list-group {
   margin-top: 20px;
 }
@@ -255,45 +231,39 @@ body {
 .newandrecentNotes {
   margin-top: 2%;
 }
-.list-group-item::after{
+
+.list-group-item::after {
   background-image: url("https://cdn-icons-png.flaticon.com/512/4476/4476373.png");
   width: 75px;
   height: 75px;
 }
 
 #task-board {
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
 }
-
-
-
 
 /* Mohammad section*/
-
 .contentContainer {
-  background-color:white; 
+  background-color: white;
 }
-
 
 .main-background {
-  background-image: url("https://cdn.kibrispdr.org/data/1792/pixel-art-gif-wallpaper-1920x1080-33.gif"); 
+  background-image: url("https://cdn.kibrispdr.org/data/1792/pixel-art-gif-wallpaper-1920x1080-33.gif");
 }
-
 
 .main-welcome-text {
   text-align: center;
   font-family: monospace;
-  padding: 2% ;
+  padding: 2%;
 }
 
-
-.contentContainer > h1{
+.contentContainer>h1 {
   text-align: center;
   font-size: 45px;
 }
-.contentContainer > p{
+
+.contentContainer>p {
   text-align: center;
   font-size: 30px;
   font-family: 'Ubuntu', sans-serif;
 }
-
