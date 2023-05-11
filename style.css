@@ -1,37 +1,37 @@
 * {
   padding: 0px;
-  margin: 0px;
+  margin: 0px;;
 }
 
-
+.bordercolor {
+  border: 2px rgba(0, 0, 255, 0) solid;
+}
 
 /*lisa sidebar*/
 .h-10 {
   height: 3.5em;
+  color: rgb(189, 255, 6);
 }
 
 .h-11 {
   height: 3em;
-}
-
-.icon-color {
-  color: rgb(4, 129, 253);
+  color: rgb(255, 255, 255);
 }
 
 
 .button-background-1 {
-  background-color: #a9baff;
+  background-color: #394362;
 }
 
+
 .last-line {
-  border-top: 1px solid rgb(143, 157, 176); 
+  border-top: 2px solid rgb(255, 20, 20); 
   background-color: #dbe3f2;
 }
 
-
-
-
-
+.btn-light {
+  border: 0;
+}
 
 
 
@@ -43,14 +43,13 @@
    flex-direction: row;
  }
 
+
  .task-input {
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
-  width: 60%;
-  height: 30px;
-  border: none;
-  border: 1px solid rgb(55, 53, 50);
+  width: 80%;
+  border: lightblue;
+  border: 1px solid lightskyblue;
 }
-
 
 
  .task-input > span {
@@ -151,7 +150,6 @@
  .fa-trash {
    color: rgb(87, 81, 165);
  }
-
  
  .task-done {
    text-decoration: line-through;
@@ -159,25 +157,16 @@
    transition: 0.5s;
  }
 
-
-
-
+ .main-section-added {
+  width: 80%;
+ }
  /*lisa main end*/ 
 
- .form-control{
-  width: 90%;
- }
-.contentContainer > h1{
-  text-align: center;
-  font-size: 45px;
-}
-.contentContainer > p{
-  text-align: center;
-  font-size: 30px;
-  font-family: 'Ubuntu', sans-serif;
-}
 
 
+
+
+ /*lisa darkmode*/ 
 
 
 
@@ -251,25 +240,6 @@ body {
   width: 15%;
 }
 
-#mainsection {
-  height: 100vh; 
-  background-image: url("https://cdn.kibrispdr.org/data/1792/pixel-art-gif-wallpaper-1920x1080-33.gif");
-  background-size: cover;
-  padding: 1% 2%;
-}
-
-.contentContainer {
-  padding: 2%;
-  width: 98%;
-  height: 80vh;
-  background-color: rgba(255, 255, 255, 0.726);
-  border-radius: 50px;
-}
-
-#mainsection>p {
-  text-align: left;
-  font-family: monospace;
-}
 
 .list-group {
   margin-top: 20px;
@@ -290,3 +260,38 @@ body {
   width: 75px;
   height: 75px;
 }
+
+
+
+
+
+
+/* Mohammad section*/
+
+.contentContainer {
+  background-color:white; 
+}
+
+
+.main-background {
+  background-image: url("https://cdn.kibrispdr.org/data/1792/pixel-art-gif-wallpaper-1920x1080-33.gif"); 
+}
+
+
+.main-welcome-text {
+  text-align: center;
+  font-family: monospace;
+  padding: 2% ;
+}
+
+
+.contentContainer > h1{
+  text-align: center;
+  font-size: 45px;
+}
+.contentContainer > p{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
