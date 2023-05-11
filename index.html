@@ -49,15 +49,9 @@
           <ul class="navbar-nav ms-md-auto"><!-- ms-md-auto pushes the nav to the right.-->
             <li class="felx align-self-center">
               <div class="bg-light rounded shadow-sm">
-
                 <div class="input-group">
-
                   <input type="search" placeholder="Search Task" aria-describedby="button-addon1"
                     class="form-control  border-0 bg-light">
-
-
-
-
                   <div class="input-group-append">
                     <button id="buttonSearch" type="submit" class="btn btn-link text-primary "><i
                         class="bi bi-search"></i>
@@ -67,7 +61,7 @@
               </div>
             </li>
             <!-- Home Button -->
-            <li class="nav-item m-2 active">
+            <li class="nav-item m-2 active" id="homeItem">
               <a name="" id="" class="w-100 d-flex justify-content-around nav-link" href="#" role="button">
                 <div class="col-3"><i class="bi bi-house-heart-fill h3"></i></div>
                 <div class="col-6 text-start"><span class="d-lg-none h5">Home</span></div>
@@ -92,8 +86,6 @@
   <!--sidebar & main section-->
   <div class="container-fluid h-auto">
     <div class="row h-100">
-
-
       <!--sidebar-->
       <div class="col-md-2 mh-100 bordercolor collapse collapse-horizontal show p-0 button-background-1 h-auto"
         id="leftSideBar" style="position: relative;">
@@ -151,8 +143,6 @@
               <div class="align-self-center">0</div>
             </div>
           </div>
-
-
           <!--lastbox-->
           <div class="col w-100 position-absolute bottom-0 last-line">
             <div class=" row btn h-11 mx-auto d-flex justify-content-center rounded-0 button-background-1 ">
@@ -164,84 +154,47 @@
               <i class="bi bi-cloud-arrow-up-fill col-2 align-self-center"></i>
             </div>
           </div>
-
         </div>
       </div>
-
-
-
-
-
-
       <!-- lisa Main Section -->
-
       <div class="col main-background">
         <div class="col bordercolor">
-
           <div class="main-welcome-text">
             <h1>NotePlus+</h1>
             <p>Maximize your productivity with our intuitive task management system..</p>
           </div>
-
           <section class=" container p-5 mb-5 bg-body rounded main-section-added">
             <h1>To Do List</h1>
             <div class="input-area">
-              <input type="text" class="task-input" />
+              <input type="text" class="task-input" id="taskInput" />
               <!-- <label for="task-label"><span>Do you want to add to do list?</span></label>-->
-
-
-
-              <button class="button-add" type="button"><img
+              <button class="button-add" type="button" id="submitButton"><img
                   src="https://cdn-icons-png.flaticon.com/512/7598/7598663.png" width="50px" height="auto"></button>
-
-
-
-
-
-
             </div>
-
-
             <section class="task-list-container contentContainer ">
               <div class="tab-type">
                 <div id="tab-underline"></div>
-                <div class="btn ms-0 m-2 fw-bolder fs-6 " id="tab-all" style="background-color: rgb(80, 255, 197);">
-                  All
+                <div class="btn ms-0 m-2 fw-bolder fs-6 " id="tab-all" style="background-color: rgb(80, 255, 197);"> All
                 </div>
-                <div class="btn m-2 fw-bolder fs-6" id="tab-not-done" style="background-color: rgb(80, 255, 197);">
-                  Not Done
-                </div>
-                <div class="btn m-2 fw-bolder fs-6" id="tab-done" style="background-color: rgb(80, 255, 197);">
-                  Done
+                <div class="btn m-2 fw-bolder fs-6" id="tab-not-done" style="background-color: rgb(80, 255, 197);"> Not
+                  Done </div>
+                <div class="btn m-2 fw-bolder fs-6" id="tab-done" style="background-color: rgb(80, 255, 197);"> Done
                 </div>
               </div>
               <div id="task-board">
               </div>
-
             </section>
           </section>
-
         </div>
         <!--lisa main-section end-->
       </div>
-
-
-
-
     </div><!--row-->
   </div><!--container-->
-
-
-
   <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
-
   <script src="./js/elvis.js"></script>
   <script src="./js/lisa.js"></script>
-
-
-
 </body>
 
 </html>
