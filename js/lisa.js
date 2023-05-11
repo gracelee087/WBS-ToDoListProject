@@ -28,6 +28,7 @@ function addTask() {
 
   taskList.push(task);
   userInput.value = "";
+  addButton.disabled = true; //Disabling for not being able to add empty tasks
   render();
 }
 
