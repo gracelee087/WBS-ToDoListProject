@@ -11,6 +11,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/dab690a483.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <!--this should be in the last line. otherwise bootstrap style will override our stye.css -->
 </head>
@@ -161,20 +164,31 @@
 
 
       <!-- lisa Main Section -->
+
+      <div id="mainsection">
+        <div class="contentContainer">
+         <h1>NotePlus+</h1>
+         <p>Maximize your productivity with our intuitive task management system.</p>
+         
+         
+         <div class="newandrecentNotes">
+         
+         
+
       <div class="col bordercolor vh-100">
         <section class="container p-3 mb-5 bg-body rounded">
           <h1>To Do List</h1>
           <div class="input-area">
-            <input type="text" class="task-input" />
+            <input type="text" class="task-input form-control" id="formGroupExampleInput" />
             <!-- <label for="task-label"><span>Do you want to add to do list?</span></label>-->
-            <button class="button-add" type="button">+</button>
+            <button class="button-add" type="button"><img src="https://cdn-icons-png.flaticon.com/512/7598/7598663.png" width="50px" height="auto"></button>
           </div>
 
           <section class="task-list-container">
             <div class="tab-type">
               <div id="tab-underline"></div>
-              <div id="tab-all">
-                All
+              <div id="tab-all" class= "btn btn-outline-primary">
+                All Tasks
               </div>
               <div id="tab-not-done">
                 not Done
@@ -188,6 +202,11 @@
           </section>
         </section>
       </div>
+
+    </div>
+
+  </div>
+</div>
       <!--lisa main-section end-->
 
 
@@ -195,6 +214,9 @@
 
     </div><!--row-->
   </div><!--container-->
+
+  
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>

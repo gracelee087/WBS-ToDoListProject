@@ -4,7 +4,7 @@
 }
 
 .bordercolor {
-  border: 2px blue solid;
+  border: 2px rgba(0, 0, 255, 0) solid;
 }
 
 /*lisa*/
@@ -19,6 +19,8 @@
 /*lisa main section*/
 .input-area {
    position: relative;
+   display: flex;
+   flex-direction: row;
  }
 
  .task-input > span {
@@ -34,10 +36,15 @@
  .button-add {
    border: none;
    width: 3em;
-   background-color: rgb(158, 169, 226);
+   margin-left: 5px;
+   background-color: none;
+   background-color: white;
+   
  }
  .button-add:hover {
-   background-color: cadetblue;
+   background-color: rgb(255, 255, 255);
+   transform: scale(1.1);
+   transition: 0.4s;
  }
  .button-add:active {
    background-color: #f3f4f6;
@@ -47,7 +54,8 @@
  }
  
  .task-list-container {
-   border: 1px solid rgb(37, 69, 99);
+  border: 1px solid rgb(255, 255, 255);
+  
    margin-top: 1em;
    position: relative;
  }
@@ -62,12 +70,12 @@
  }
  
  #tab-underline {
-   background-color: rgb(148, 143, 216);
+   background-color: rgb(32, 238, 253);
    height: 4px !important;
    position: absolute;
    top: 52px;
    left: 0px;
-   width: 48px;
+   width: fit-content;
    transition: 0.5s;
    padding: 0px;
  }
@@ -122,8 +130,18 @@
 
  /*lisa main end*/ 
 
-
-
+ .form-control{
+  width: 90%;
+ }
+.contentContainer > h1{
+  text-align: center;
+  font-size: 45px;
+}
+.contentContainer > p{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+}
 
 
 
@@ -197,7 +215,8 @@ body {
 }
 
 #mainsection {
-  width: 85%;
+  width: 83%;
+  min-height: 94vh;
   background-image: url("https://cdn.kibrispdr.org/data/1792/pixel-art-gif-wallpaper-1920x1080-33.gif");
   background-size: cover;
   padding: 1% 2%;
