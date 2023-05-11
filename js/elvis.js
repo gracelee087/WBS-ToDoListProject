@@ -12,8 +12,8 @@ const rightNavbarBreakpoint = 992;
 let largeScreen = window.innerWidth >= rightNavbarBreakpoint ? true : false;
 
 //Main Section
-// const submitBtnE = document.querySelector("#submitButton");
-// submitBtnE.disabled = true;
+const submitBtnE = document.querySelector("#submitButton");
+submitBtnE.disabled = true;
 const taskInput = document.querySelector("#taskInput");
 
 //Event Listeners----------------------------------------------------------
@@ -46,3 +46,18 @@ window.addEventListener("resize", (e) => {
     largeScreen = true;
   }
 })
+
+/**
+ * Disabling Submit Button 
+ */
+taskInput.addEventListener("input", (e) => {
+  console.log("changing input")
+  if (taskInput.value === "") {
+    console.log("disabling");
+
+    submitBtnE.disabled = true;
+  } else if (submitBtnE.disabled = true) {
+    submitBtnE.disabled = false;
+
+  }
+});
