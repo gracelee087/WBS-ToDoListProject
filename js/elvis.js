@@ -48,7 +48,7 @@ window.addEventListener("resize", (e) => {
 })
 
 /**
- * Disabling Submit Button 
+ * Disabling Submit Button if Taskinput empty
  */
 taskInput.addEventListener("input", (e) => {
   console.log("changing input")
