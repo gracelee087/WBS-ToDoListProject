@@ -57,11 +57,13 @@ function render() {
             </div>
         </div>`;
     } else {
-      result += `<div class="task" id="${list[i].id}" >
+      result += `<div class="task" id="${list[i].id}" >            
             <span>${list[i].content}</span>
+            <input type="text" class="d-none" data-task="${list[i].id}">
             <div class="button-box">
-            <button onclick="toggleDone('${list[i].id}')"><i class="fa fa-check"></i></button>
-            <button onclick="deleteTask('${list[i].id}')"><i class="fa fa-trash"></i></button>
+            <button class="but pencil" value="${list[i].id}"><i class="bi bi-pencil"></i></button>
+            <button class="but check" onclick="toggleDone('${list[i].id}')"><i class="fa fa-check"></i></button>
+            <button class="but trash" onclick="deleteTask('${list[i].id}')"><i class="fa fa-trash"></i></button>
             </div>
         </div>`;
     }
