@@ -1,8 +1,8 @@
-let userInput = document.querySelector(".task-input"); 
-let addButton = document.querySelector(".button-add"); 
+let userInput = document.querySelector(".task-input");
+let addButton = document.querySelector(".button-add");
 let tabs = document.querySelectorAll(".tab-type div");
 let underLine = document.getElementById("tab-underline");
-let taskList = []; 
+let taskList = [];
 let selectedMenu = "tab-all";  // initial value
 let filteredList = [];
 
@@ -21,16 +21,19 @@ for (let i = 0; i < tabs.length; i++) {
   });
 }
 
-function addTask() { 
-  let taskValue = userInput.value; 
+function addTask() {
+  let taskValue = userInput.value;
   let task = {
     content: taskValue,
     isComplete: false,
     id: randomIDGenerator(),
   };
 
-  taskList.push(task); 
+  taskList.push(task);
   userInput.value = "";
+  //Elvis
+  addButton.disabled = true; //Disabling for not being able to add empty tasks
+  //Elvis end
   render();
 }
 
