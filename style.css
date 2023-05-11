@@ -50,6 +50,7 @@
   width: 80%;
   border: lightblue;
   border: 1px solid lightskyblue;
+  font-size: 1.3rem; 
 }
 
 
@@ -260,7 +261,9 @@ body {
   height: 75px;
 }
 
-
+#task-board {
+  font-size: 1.2rem; 
+}
 
 
 
