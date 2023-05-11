@@ -7,6 +7,41 @@ let selectedMenu = "tab-all";  // initial value
 let filteredList = [];
 
 
+//Adding Eventlistener before calling
+//Elvis start
+/**
+ * Adding eventlistener to the edit buttons
+ */
+const addEditEvents = () => {
+  // console.log("call Event adder")
+  const edits = document.querySelectorAll(".pencil")
+  edits.forEach(element => {
+    // console.log(element);
+    element.addEventListener("click", (e) => {
+      edit(e);
+    })
+  })
+}
+
+/**
+ * Editing value of Task when focus changes from input to somwhere else
+ */
+const addInputvents = () => {
+  const inputs = document.querySelectorAll(".task input")
+  inputs.forEach(element => {
+    element.addEventListener("focusout", (e) => {
+      // console.log("focusout")
+      // console.log(element.dataset.task)
+      let task = getTaskById(element.dataset.task)
+      // console.log("this task")
+      // console.log(task)
+      // console.log("after")
+      task.content = element.value
+      render()
+    })
+  })
+}
+//Elvis END----------------------------------------------
 
 addButton.addEventListener("mousedown", addTask);
 userInput.addEventListener("keydown", function (event) {
@@ -70,6 +105,8 @@ function render() {
   }
 
   document.getElementById("task-board").innerHTML = result;
+  addEditEvents();
+  addInputvents();
 }
 
 
@@ -145,3 +182,42 @@ window.addEventListener("beforeunload", function () { // window객체에 추가�
 });
 
 
+/**
+ * @author Elvis
+ * Adding eventlisteners and functions for editing Tasks 
+ */
+
+
+
+/**
+ * Returns the task with a given ID
+ * @param: id of the Task
+ * @returns : Task with given ID
+ */
+const getTaskById = (id) => {
+  return taskList.filter((task) => task.id === id)[0];
+}
+
+/**
+ * Gets the clickevent e and opens an Inputfield on the clicked Task
+ * for editing the value
+ * @param {*} e 
+ */
+const edit = (e) => {
+  // console.log("call edit")
+  // console.log(e.currentTarget.value)
+  let id = e.currentTarget.value
+  let clickedTask = document.querySelector(`#${id}`)
+  // console.log(focus)
+  //pick the span element and the invisible input element
+  let selectedSpanValue = clickedTask.querySelector("span").textContent
+  let selectedInput = clickedTask.querySelector("input")
+
+  //setting the task name as input value 
+  selectedInput.value = selectedSpanValue;
+  //Toggeling visibility of the elments
+  clickedTask.querySelector("span").classList.toggle("d-none")
+  clickedTask.querySelector("input").classList.toggle("d-none")
+  //Selecting the inputfield
+  selectedInput.focus()
+}
