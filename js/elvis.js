@@ -19,11 +19,25 @@ const taskInput = document.querySelector("#taskInput");
 //Event Listeners----------------------------------------------------------
 
 /**
+ * Adds 5px margin to the Home button if offcanvas opens. 
+ * Gives Nicer spacing to the search bar
+ */
+rightOffcanvas.addEventListener("show.bs.offcanvas", (e) => {
+  homeItem.classList.add("mt-4");
+})
+/**
+ * Removes 5px margin to the Home button when offcanvas closes. 
+ */
+rightOffcanvas.addEventListener("hide.bs.offcanvas", (e) => {
+  homeItem.classList.remove("mt-4");
+})
+
+/**
  * Changes the collapse Directon of the left Sidebar
  * depending on a Breakpoint while resizing window
  */
 window.addEventListener("resize", (e) => {
-  console.log(window.innerWidth)
+  // console.log(window.innerWidth)
   if (window.innerWidth < rightNavbarBreakpoint && largeScreen) {
     leftSideBar.classList.remove("collapse-horizontal");
     largeScreen = false;
