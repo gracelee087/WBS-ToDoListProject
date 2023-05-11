@@ -61,3 +61,5 @@ taskInput.addEventListener("input", (e) => {
 
   }
 });
+
+import("./storage.js")
