@@ -10,7 +10,9 @@ const homeItem = document.querySelector("#homeItem")
 const leftSideBar = document.querySelector("#leftSideBar");
 const rightNavbarBreakpoint = 992;
 let largeScreen = window.innerWidth >= rightNavbarBreakpoint ? true : false;
-
+if (!largeScreen) {
+  leftSideBar.classList.remove("collapse-horizontal");
+}
 //Main Section
 const submitBtnE = document.querySelector("#submitButton");
 submitBtnE.disabled = true;
