@@ -1,3 +1,58 @@
+// ********************* html tasklist dom ********************* //
+// parent container
+const parentContainer = document.querySelector('.main-section-added');
+
+//  Task list container
+const taskListContainer = document.createElement('section');
+taskListContainer.classList.add('task-list-container', 'contentContainer');
+
+// Tab type div
+const tabTypeDiv = document.createElement('div');
+tabTypeDiv.classList.add('tab-type');
+
+// Tab underline div
+const tabUnderlineDiv = document.createElement('div');
+tabUnderlineDiv.id = 'tab-underline';
+tabTypeDiv.appendChild(tabUnderlineDiv);
+
+// All tab button
+const allTabButton = document.createElement('div');
+allTabButton.classList.add('btn', 'ms-0', 'm-2', 'fw-bolder', 'fs-6');
+allTabButton.id = 'tab-all';
+allTabButton.style.backgroundColor = 'rgb(80, 255, 197)';
+allTabButton.textContent = 'All';
+tabTypeDiv.appendChild(allTabButton);
+
+// Not Done tab button
+const notDoneTabButton = document.createElement('div');
+notDoneTabButton.classList.add('btn', 'm-2', 'fw-bolder', 'fs-6');
+notDoneTabButton.id = 'tab-not-done';
+notDoneTabButton.style.backgroundColor = 'rgb(80, 255, 197)';
+notDoneTabButton.textContent = 'Not Done';
+tabTypeDiv.appendChild(notDoneTabButton);
+
+// Done tab button
+const doneTabButton = document.createElement('div');
+doneTabButton.classList.add('btn', 'm-2', 'fw-bolder', 'fs-6');
+doneTabButton.id = 'tab-done';
+doneTabButton.style.backgroundColor = 'rgb(80, 255, 197)';
+doneTabButton.textContent = 'Done';
+tabTypeDiv.appendChild(doneTabButton);
+
+taskListContainer.appendChild(tabTypeDiv);
+
+// Task board div
+const taskBoardDiv = document.createElement('div');
+taskBoardDiv.id = 'task-board';
+taskListContainer.appendChild(taskBoardDiv);
+
+// Append the task list container to the parent container
+parentContainer.appendChild(taskListContainer);
+
+
+
+// ********************* Event part ********************* //
+
 let userInput = document.querySelector(".task-input");
 let addButton = document.querySelector(".button-add");
 let tabs = document.querySelectorAll(".tab-type div");
@@ -75,8 +130,6 @@ function addTask() {
 
 
 
-
-
 function render() {
   let result = "";
   list = [];
@@ -138,7 +191,6 @@ function deleteTask(id) {
 
 
 
-
 function filter(e) {
   if (e) {
     selectedMenu = e.target.id;
@@ -171,7 +223,6 @@ function randomIDGenerator() {
   // after the decimal.
   return "_" + Math.random().toString(36).substring(2, 9);
 }
-
 
 
 //local storage part 
