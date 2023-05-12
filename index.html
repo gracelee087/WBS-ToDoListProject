@@ -18,7 +18,7 @@
   <!--this should be in the last line. otherwise bootstrap style will override our stye.css -->
 </head>
 
-<body class="dark">
+<body class="dark vh-100">
   <!--header section-->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top p-0">
@@ -84,14 +84,14 @@
     </nav>
   </header>
   <!--sidebar & main section-->
-  <div class="container-fluid h-auto">
+  <div class="container-fluid h-100">
     <div class="row h-100">
       <!--sidebar-->
-      <div class="col-md-2 mh-100 bordercolor collapse collapse-horizontal show p-0 button-background-1 h-auto"
+      <div class="col-md-2 bordercolor collapse collapse-horizontal show p-0 button-background-1 overflow-hidden"
         id="leftSideBar" style="position: relative;">
-        <div class="col flex-grow-1 d-flex flex-column vh-100">
+        <div class="col flex-grow-1 d-flex flex-column ">
           <!--firstbox-->
-          <div class="col flex-grow-1 vh-100">
+          <div class="col flex-grow-1">
             <div class="btn btn-light rounded-0 d-flex justify-content-between h-10 button-background-1 ">
               <i class="bi bi-brightness-high col-1 align-self-center"></i>
               <div type="button" class="rounded-0 w-75 text-start linkUnder align-self-center">All</div>
@@ -164,8 +164,8 @@
             <p>Maximize your productivity with our intuitive task management system..</p>
           </div>
           <section class=" container p-5 mb-5 bg-body rounded main-section-added">
-            <h1>To Do List</h1>
-            <div class="input-area d-flex gap-4">
+            <!-- <h1>To Do List</h1> -->
+            <div class="input-area d-flex gap-2 justify-content-center">
               <input type="text" class="task-input" placeholder="new Task" id="taskInput" />
               <!-- <label for="task-label"><span>Do you want to add to do list?</span></label>-->
               <button class="button-add" type="button" id="submitButton"><img
