@@ -221,3 +221,16 @@ const edit = (e) => {
   //Selecting the inputfield
   selectedInput.focus()
 }
+
+/**
+ * Adding delete button
+ * 
+ */
+const deleteButton = document.querySelector("#deleteButton")
+console.log("call delete")
+deleteButton.addEventListener("click", (e) => {
+  localStorage.removeItem("taskList")
+  taskList = [];
+  filteredList = []
+  render()
+})
