@@ -42,9 +42,10 @@
 .task-input {
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
   width: 80%;
-  border: lightblue;
+  /* border: lightblue; */
   border: 1px solid lightskyblue;
   font-size: 1.3rem;
+  padding-left: 1rem;
 }
 
 .task-input>span {
@@ -192,6 +193,10 @@
 
 .task:hover .but {
   opacity: 1;
+}
+
+.task input {
+  padding: 1rem;
 }
 
 /* Elvis END */
