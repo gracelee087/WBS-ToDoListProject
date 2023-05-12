@@ -258,6 +258,7 @@ body {
 
 .main-background {
   background-image: url("./pictures/background-main.gif");
+  height: 101vh;
 }
 
 .secondary-background {
