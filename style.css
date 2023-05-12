@@ -32,6 +32,7 @@
   border: 0;
 }
 
+
 /*lisa main section*/
 .input-area {
   position: relative;
@@ -120,6 +121,7 @@
 
 .button-box {
   display: flex;
+  
 }
 
 .button-box button {
@@ -129,11 +131,13 @@
   margin: 0;
   background-color: white;
   transition: 0.5s;
+  
 }
 
 .button-box button :active {
   position: relative;
   top: 0.5px;
+  
 }
 
 /* Commented from Elvis because of added hover effects */
@@ -252,7 +256,12 @@ body {
 }
 
 .main-background {
-  background-image: url("https://cdn.kibrispdr.org/data/1792/pixel-art-gif-wallpaper-1920x1080-33.gif");
+  background-image: url("./pictures/background-main.gif");
+  height: 101vh;
+}
+
+.secondary-background {
+  background-image: url("https://wallpaperaccess.com/full/2825710.gif");
 }
 
 .main-welcome-text {
@@ -277,4 +286,7 @@ body {
   text-align: center;
   font-size: 30px;
   font-family: 'Ubuntu', sans-serif;
+}
+.container{
+  border: solid 1px black;
 }

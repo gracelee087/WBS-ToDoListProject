@@ -5,6 +5,7 @@ let underLine = document.getElementById("tab-underline");
 let taskList = [];
 let selectedMenu = "tab-all";  // initial value
 let filteredList = [];
+let removeBtn = document.querySelector('.removeAllbtn');
 
 
 //Adding Eventlistener before calling
@@ -71,6 +72,9 @@ function addTask() {
   //Elvis end
   render();
 }
+
+
+
 
 
 function render() {
@@ -221,3 +225,36 @@ const edit = (e) => {
   //Selecting the inputfield
   selectedInput.focus()
 }
+
+/**
+ * Adding delete button
+ * 
+ */
+const deleteButton = document.querySelector("#deleteButton")
+console.log("call delete")
+deleteButton.addEventListener("click", (e) => {
+  localStorage.removeItem("taskList")
+  taskList = [];
+  filteredList = []
+  render()
+})
+
+/**
+ * Mohamed edits here :)
+ * 
+ * 
+ */
+const divElement = document.querySelector('.main-background');
+
+let timeoutId;
+
+userInput.addEventListener('input', function() {
+  divElement.classList.add('secondary-background');
+
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(function() {
+    divElement.classList.remove('secondary-background');
+  }, 4000);
+});
+
+
