@@ -7,7 +7,7 @@ export default class TaskHandler {
   }
   get getAllTasks() {
     //return alle Tasks
-    return this.tasks.values();
+    return Object.values(this.tasks);
   }
   get getVisibleTasks() {
     return this.visibleTasks
@@ -25,6 +25,7 @@ export default class TaskHandler {
     this.tasks[newTask.getId] = newTask;
     console.log(newTask);
     console.log(this.tasks);
+
   }
 
   removeTask(id) {

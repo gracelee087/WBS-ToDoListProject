@@ -9,6 +9,14 @@ console.log("view")
 
 const createTask = (content) => {
   taskHandler.createTask(content);
+  console.log(taskHandler.getAllTasks)
+  view.render(taskHandler.getAllTasks)
+}
+
+const removeTask = (id) => {
+  console.log(`remove ${id}`)
+  taskHandler.removeTask(id);
+  view.render(taskHandler.getAllTasks)
 }
 
 const addAddEvent = () => {
@@ -18,4 +26,5 @@ const addAddEvent = () => {
 //App run
 console.log('run')
 addAddEvent();
+view.setRemoveClickFunction(removeTask);
 
