@@ -1,6 +1,6 @@
-import(Task)
+import Task from "./task.js"
 
-class TaskHandler {
+export default class TaskHandler {
   constructor() {
     this.tasks = {}
     this.visibleTasks = []
@@ -9,7 +9,7 @@ class TaskHandler {
     //return alle Tasks
     return this.tasks.values();
   }
-  get visibleTasks() {
+  get getVisibleTasks() {
     return this.visibleTasks
   }
 
@@ -22,9 +22,9 @@ class TaskHandler {
 
   createTask(content) {
     const newTask = new Task(this.randomIdGenerator(), content)
-    this.tasks[newTask.getId, newTask]
+    this.tasks[newTask.getId] = newTask;
     console.log(newTask);
-    console.log(tasks);
+    console.log(this.tasks);
   }
 
   removeTask(id) {

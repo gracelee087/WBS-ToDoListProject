@@ -1,4 +1,4 @@
-class Task {
+export default class Task {
   constructor(id, content) {
     this.id = id;
     this.content = content;
@@ -13,7 +13,7 @@ class Task {
     return this.content;
   }
 
-  get isComplete() {
+  get getIsComplete() {
     return this.isComplete;
   }
 
